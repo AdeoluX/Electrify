@@ -5,6 +5,6 @@ const { protect } = require("../middleware/protect");
 
 router.post("/upload", protect, uploadMusic);
 router.get("/mySongs", protect, allMySongs);
-router.post("/delete", deleteMusic);
+router.delete("/delete", protect, deleteMusic);
 
 module.exports = router;
